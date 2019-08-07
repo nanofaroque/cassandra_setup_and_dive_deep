@@ -52,3 +52,12 @@ select * from system_schema.tables where keyspace_name = 'ks1';
 insert into ks1.user_tracking(user_id, action_category, action_id,  action_detail) VALUES ('user1', 'auth', 'a1',  'Logged in from home page');
 
 ```
+
+### Nodetool directory
+```
+cd /usr/local/opt/cassandra
+```
+### running nodetool command
+```
+bin/nodetool flush
+```
