@@ -58,6 +58,7 @@ insert into ks1.user_tracking(user_id, action_category, action_id,  action_detai
 cd /usr/local/opt/cassandra
 ```
 ### Running nodetool command
+- Flush commmand will flush the data into disk
 ```
 bin/nodetool flush
 ```
