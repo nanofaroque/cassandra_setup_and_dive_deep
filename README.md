@@ -1,9 +1,9 @@
 # Installing cassandra on MAC and deep dive into the internal
 
-### install cassandra on MAC
+### Install cassandra on MAC
 ```brew install cassandra```
 
-### starting Cassandra
+### Starting Cassandra
 ```cassandra -f```
 
 ### To see the internal of cassandra
@@ -40,13 +40,13 @@ CREATE TABLE ks1.user_tracking (
 );
 ```
 
-### check for this table in system_schema.tables table
+### Check for this table in system_schema.tables table
 
 ```
 select * from system_schema.tables where keyspace_name = 'ks1';
 ```
 
-### insert some data
+### Insert some data
 
 ```
 insert into ks1.user_tracking(user_id, action_category, action_id,  action_detail) VALUES ('user1', 'auth', 'a1',  'Logged in from home page');
@@ -57,7 +57,7 @@ insert into ks1.user_tracking(user_id, action_category, action_id,  action_detai
 ```
 cd /usr/local/opt/cassandra
 ```
-### running nodetool command
+### Running nodetool command
 ```
 bin/nodetool flush
 ```
