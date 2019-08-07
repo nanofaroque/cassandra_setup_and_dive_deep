@@ -15,8 +15,27 @@ data_file_directories:
      - /usr/local/var/lib/cassandra/data
 
 ```
-### Entering to CQL shell
+
+### Create a keypace
+```
+CREATE KEYSPACE ks1 WITH replication={'class':'SimpleStrategy','replication_factor':1};
+```
+
+### See the new KEYSPACE
 
 ```
-cqlsh
+select * from system_schema.keyspaces where keyspace_name = 'ks1';
+```
+
+### Create table in the keyspaces
+
+```
+CREATE TABLE ks1.user_tracking (
+  user_id text,
+  action_category text,
+  action_id text,
+  action_detail text,
+
+  PRIMARY KEY(user_id, action_category, action_id)
+);
 ```
