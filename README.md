@@ -15,3 +15,8 @@ data_file_directories:
      - /usr/local/var/lib/cassandra/data
 
 ```
+### Entering to CQL shell
+
+```
+cqlsh
+```
