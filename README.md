@@ -1,1 +1,7 @@
-# cassandra_setup_and_dive_deep
+# Installing cassandra on MAC and deep dive into the internal 
+
+### install cassandra on MAC
+```brew install cassandra```
+
+### starting Cassandra
+```cassandra -f```
