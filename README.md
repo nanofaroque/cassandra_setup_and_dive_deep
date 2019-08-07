@@ -39,3 +39,16 @@ CREATE TABLE ks1.user_tracking (
   PRIMARY KEY(user_id, action_category, action_id)
 );
 ```
+
+### check for this table in system_schema.tables table
+
+```
+select * from system_schema.tables where keyspace_name = 'ks1';
+```
+
+### insert some data
+
+```
+insert into ks1.user_tracking(user_id, action_category, action_id,  action_detail) VALUES ('user1', 'auth', 'a1',  'Logged in from home page');
+
+```
