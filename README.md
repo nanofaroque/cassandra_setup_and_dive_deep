@@ -8,3 +8,10 @@
 
 ### To see the internal of cassandra
 ```cd /usr/local/etc/cassandra```
+
+### Open the configuration and remove # from these two lines
+```
+data_file_directories:
+     - /usr/local/var/lib/cassandra/data
+
+```
